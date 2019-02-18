@@ -6,10 +6,89 @@
     <Name>WWI_SSAS.database</Name>
     <FullPath>WWI_SSAS.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>WWI_DSV.cube</Name>
+      <FullPath>WWI_DSV.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>WWI_DSV.partitions</Name>
+          <FullPath>WWI_DSV.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>vDimCity.dim</Name>
+      <FullPath>vDimCity.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimDate.dim</Name>
+      <FullPath>vDimDate.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimCustomer.dim</Name>
+      <FullPath>vDimCustomer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimEmployee.dim</Name>
+      <FullPath>vDimEmployee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimPaymentMethod.dim</Name>
+      <FullPath>vDimPaymentMethod.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimSupplier.dim</Name>
+      <FullPath>vDimSupplier.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>vDimTransactionType.dim</Name>
+      <FullPath>vDimTransactionType.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>WWI_DS.ds</Name>
+      <FullPath>WWI_DS.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>WWI_DSV.dsv</Name>
+      <FullPath>WWI_DSV.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>Admin.role</Name>
+      <FullPath>Admin.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ReadAccess.role</Name>
+      <FullPath>ReadAccess.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=WideWorldImportersDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
